@@ -1,32 +1,4 @@
-@font-face {
-  font-family: 'SF Pro';
-  src: url('./assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Pro';
-  src: url('./assets/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
-  font-weight: 700;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: 'SF Pro';
-  src: url('./assets/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Pro';
-  src: url('./assets/fonts/SFNSText-Light.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import './assets/styles/fonts.scss';
 
 * {
   margin: 0;
@@ -176,8 +148,8 @@ body.banner {
       transition: transform .2s;
 
       &__title {
-        font-size: 17px;
-        line-height: 20px;
+        font-size: 1.0625rem;
+        line-height: 1.25rem;
       }
 
       &__bg {
@@ -288,5 +260,164 @@ body.banner {
 .nl {
   .main__description-container {
     gap: 5px;
+  }
+}
+
+@media screen and (min-height: 896px) {
+
+  .nl {
+    .main {
+      margin-top: 248px;
+    }
+
+    .description__text {
+      font-size: 16px;
+    }
+
+    .main__description-container {
+      width: 255.5px;
+    }
+  }
+
+
+}
+
+@media screen and (min-height: 887px) {
+
+  .main {
+    margin-top: 216px;
+  }
+}
+
+@media screen and (min-height: 844px) {
+
+  .main {
+    margin-top: 216px;
+  }
+
+  .es {
+    .main {
+      margin-top: 183px;
+    }
+  }
+
+  .nl {
+    .description__text {
+      font-size: 16px;
+    }
+
+    .main__description-container {
+      width: 255.5px;
+    }
+  }
+}
+
+@media screen and (max-height: 790px) {
+
+  .main {
+    margin-top: 140px;
+  }
+}
+
+@media screen and (max-height: 736px) {
+
+  .main {
+    margin-top: 107px;
+  }
+
+  .fr {
+
+    .main__description-container {
+      margin: 13px 0 28px 0;
+    }
+
+  }
+
+  .es {
+
+    .main__description-container {
+      width: 273.5px;
+    }
+
+  }
+}
+
+@media screen and (max-height: 667px) {
+
+  .main {
+    margin-top: 68px;
+  }
+
+  .main__description-container {
+    width: 208.5px;
+    margin: 13px 0 29px 0;
+  }
+
+  .es {
+
+    .main__title {
+      font-size: 24px;
+    }
+
+    .main__description-container {
+      width: 273.5px;
+    }
+
+  }
+}
+
+@media screen and (max-height: 568px) {
+
+  .banner__content {
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+
+  .main {
+
+    .cards {
+      margin-bottom: 19px;
+      width: 288px;
+    }
+  }
+
+  .ru .main__title {
+    font-size: 20px;
+  }
+
+  .main__description-container .description__text {
+    font-size: 13px;
+  }
+
+  .main__description-container {
+    width: 208.5px;
+    margin: 9px 0 17px 0;
+  }
+
+  .text_small {
+    margin: 7px 0;
+  }
+
+  .ja {
+    .main__description-container {
+      width: 189.5px;
+    }
+  }
+
+  .es,
+  .fr {
+
+    .main__title {
+      font-size: 20px;
+      line-height: 2.125rem;
+    }
+
+    .main__description-container {
+      margin: 0px 0 13px 0;
+    }
+  }
+
+  .btn {
+    height: 48px;
   }
 }
