@@ -4,11 +4,33 @@
   box-sizing: border-box;
 }
 
-body {
+.banner {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #363636;
+  background: url(./assets/images/4@3x.webp) center/cover no-repeat;
+
+  &__content {
+    height: 100vh;
+    padding: 40px 20px;
+  }
+
+  &__top,
+  &__content,
+  &__middle {
+    justify-content: space-between;
+  }
+
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
