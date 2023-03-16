@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "rss-scripts": "^0.2.4"
+  },
+  "dependencies": {
+    "i18next": "^22.4.11"
   }
 }
