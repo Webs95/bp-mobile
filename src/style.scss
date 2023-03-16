@@ -19,12 +19,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./assets/fonts/SFNSText-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body.banner {
+  font-size: 16px;
 }
 
 .banner {
@@ -46,9 +57,7 @@
     align-items: center;
   }
 
-  &__top,
-  &__content,
-  &__middle {
+  &__top {
     justify-content: space-between;
   }
 
@@ -81,7 +90,7 @@
 
 .restore {
   font-size: .8125rem;
-  letter-spacing: -0.216667px;
+  letter-spacing: -0.0135rem;
   line-height: 2.5625rem;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
@@ -119,6 +128,7 @@
 }
 
 .main {
+  margin-top: 9.8125rem;
   align-items: center;
 
   &__title {
@@ -134,8 +144,8 @@
     margin: 1.8125rem 0 2.7813rem 0;
 
     .description__text {
-      font-weight: 100;
-      font-size: 17px;
+      font-weight: 200;
+      font-size: 1.0625rem;
       line-height: 1.875rem;
       letter-spacing: -0.0201rem;
       text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.684495);
@@ -165,11 +175,17 @@
 
       transition: transform .2s;
 
+      &__title {
+        font-size: 17px;
+        line-height: 20px;
+      }
+
       &__bg {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
+        z-index: -1;
       }
 
       &__discount {
@@ -214,7 +230,21 @@
         background-color: rgba(73, 87, 149, 1);
       }
 
-      &__price {}
+      &__price {
+        &-container {
+          margin-bottom: 13.37px;
+        }
+      }
+
+      &__price-description {
+        font-weight: 200;
+        font-size: 13px;
+      }
+
+      &__month-pay {
+        font-weight: 200;
+        font-size: 13.2px;
+      }
     }
   }
 }
@@ -224,5 +254,39 @@
 
   &__links {
     justify-content: space-between;
+  }
+}
+
+.ru,
+.nl,
+.fr {
+  .main__title {
+    font-size: 28px;
+  }
+
+  .main__description-container {
+    gap: 5px;
+  }
+
+  .description__text {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .card__subtitle-container {
+    font-size: 12px;
+  }
+}
+
+.ru,
+.ja {
+  .main__description-container {
+    width: 284.5px;
+  }
+}
+
+.nl {
+  .main__description-container {
+    gap: 5px;
   }
 }
