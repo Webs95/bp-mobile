@@ -15,6 +15,7 @@ let userChoose = "monthly";
 
 const cardFirst = document.querySelector(".card_first");
 const cardSecond = document.querySelector(".card_second");
+const bannerBody = document.querySelector(".banner");
 
 const restore = document.getElementById("restore");
 const access = document.getElementById("access");
@@ -78,22 +79,20 @@ const initTranslate = () => {
 
 const setTranslate = () => {
   restore.innerHTML = i18next.t("Restore");
-  access.innerHTML = i18next.t("Unlimited Access<br>to All Features");
+  access.innerHTML = i18next.t("Unlimited Access to All Features");
   clouds.innerHTML = i18next.t("Unlimited documents");
   documents.innerHTML = i18next.t("Unlimited documents");
-  // documents.innerHTML = i18next.t("Unlimited documents");
+  clouds.innerHTML = i18next.t("Export to clouds");
   ocr.innerHTML = i18next.t("Text recognition (OCR)");
   monthly.innerHTML = i18next.t("Monthly");
-  // priceFirstCard.innerHTML = i18next.t("Unlimited documents");
-  monthly.innerHTML = i18next.t("Monthly");
-  perMonth.innerHTML = i18next.t("<strong>{{price}}</strong><br>per month");
+  perMonth.innerHTML = i18next.t("per month");
   threeDaysFree.innerHTML = i18next.t("3 DAYS FREE");
-  priceMonthFirstCard.innerHTML = i18next.t("{{price}}/month");
+  priceMonthFirstCard.innerHTML = i18next.t("month");
   discount.innerHTML = i18next.t("-83%");
   annually.innerHTML = i18next.t("Annually");
-  perYear.innerHTML = i18next.t("<strong>{{price}}</strong><br>per year");
+  perYear.innerHTML = i18next.t("per year");
   mostPopular.innerHTML = i18next.t("MOST POPULAR");
-  priceMonthSecondCard.innerHTML = i18next.t("{{price}}/month");
+  priceMonthSecondCard.innerHTML = i18next.t("month-year");
   continueBtn.innerHTML = i18next.t("Continue");
   rewable.innerHTML = i18next.t("Auto-renewable. Cancel anytime.");
   terms.innerHTML = i18next.t("Terms of Use");
@@ -127,3 +126,5 @@ continueBtn.addEventListener("click", () => {
     ? (window.location.href = "https://apple.com/")
     : (window.location.href = "https://google.com/");
 });
+
+bannerBody.classList.add(`${lang}`);
