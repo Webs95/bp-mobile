@@ -11,8 +11,8 @@
 <body class="banner">
   <div class="banner__content column">
     <header class="banner__top header row">
-      <img src="./assets/images/svg/ic_close_24px copy.svg" alt="close" class="icon icon_cross">
-      <span class="icon icon_restore" id="restore">Restore</span>
+      <a href="#"><img src="./assets/images/svg/ic_close_24px copy.svg" alt="close" class="icon icon_cross"></a>
+      <a href="#" class="restore" id="restore">Restore</a>
     </header>
 
     <main class="banner__middle main column">
@@ -20,56 +20,58 @@
         to All Features</h1>
       <div class="main__description-container column">
 
-        <div class="row row_gap16">
+        <div class="row row_gap6">
           <img src="./assets/images/svg/unlimitedDocs.svg" alt="infinity" class="icon">
           <span class="description__text" id="documents">Unlimited documents</span>
         </div>
 
-        <div class="row row_gap16">
+        <div class="row row_gap6">
           <img src="./assets/images/svg/export.svg" alt="infinity" class="icon">
-          <span class="description__text" id="export">Export to clouds</span>
+          <span class="description__text" id="clouds">Export to clouds</span>
         </div>
 
-        <div class="row row_gap16">
+        <div class="row row_gap6">
           <img src="./assets/images/svg/noAds.svg" alt="infinity" class="icon">
           <span class="description__text" id="ocr">Text recognition (OCR)</span>
         </div>
+      </div>
 
-        <div class="cards row">
-          <div class="card column">
-            <h3 class="card__title" id="monthly-first-card">Monthly</h3>
-            <div class="card__price-container column">
-              <span class="card__price" id="price-first-card">$9.99</span>
-              <span class="card__price-description" id="per-month">per month</span>
-            </div>
-            <div class="card__subtitle-container">
-              <span class="card__subtitle" id="3-days-free">3 DAYS FREE</span>
-            </div>
-            <span class="card__month-pay" id="price-month-first-card">$9.99 month</span>
+      <div class="cards row">
+        <div class="card card_first card_active column">
+          <img class="card__bg" src="./assets/images/svg/shape-1.svg" alt="bg">
+          <h3 class="card__title" id="monthly">Monthly</h3>
+          <div class="card__price-container column">
+            <span class="card__price" id="price-first-card">$9.99</span>
+            <span class="card__price-description" id="per-month">per month</span>
           </div>
-
-          <div class="card column">
-            <div class="card__discount">
-              <span class="discount" id="discount">-83%</span>
-            </div>
-            <h3 class="card__title" id="annually">Annually</h3>
-            <div class="card__price-container column">
-              <span class="card__price" id="price-second-card">$19.99</span>
-              <span class="card__price-description" id="per-year">per year</span>
-            </div>
-            <div class="card__subtitle-container">
-              <span class="card__subtitle" id="most-popular">MOST POPULAR</span>
-            </div>
-            <span class="card__month-pay" id="price-month-second-card">$1.66 month</span>
+          <div class="card__subtitle-container row">
+            <span class="card__subtitle" id="3-days-free">3 DAYS FREE</span>
           </div>
+          <span class="card__month-pay" id="price-month-first-card">$9.99 month</span>
         </div>
 
-        <button class="btn" id="continue"></button>
-        <p class="text text_small" id="cancel">Auto-rewable. Cancel anytime</p>
+        <div class="card card_second column">
+          <img class="card__bg" src="./assets/images/svg/shape-2.svg" alt="bg">
+          <div class="card__discount row">
+            <span class="discount" id="discount">-83%</span>
+          </div>
+          <h3 class="card__title" id="annually">Annually</h3>
+          <div class="card__price-container column">
+            <span class="card__price" id="price-second-card">$19.99</span>
+            <span class="card__price-description" id="per-year">per year</span>
+          </div>
+          <div class="card__subtitle-container row">
+            <span class="card__subtitle" id="most-popular">MOST POPULAR</span>
+          </div>
+          <span class="card__month-pay" id="price-month-second-card">$1.66 month</span>
+        </div>
       </div>
+
+      <button class="btn" id="continue"></button>
     </main>
 
     <footer class="banner__bottom footer">
+      <p class="text text_small" id="rewable">Auto-rewable. Cancel anytime</p>
       <div class="footer__links row">
         <a href="#" class="link" id="terms">Terms of Use</a>
         <a href="#" class="link" id="privacy">Privacy Policy</a>
