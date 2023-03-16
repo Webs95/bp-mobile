@@ -11,7 +11,7 @@ import translationRU from "./assets/localization/ru.json";
 const urlParams = new URLSearchParams(window.location.search);
 const langParam = urlParams.get("lang");
 let lang;
-let userChoose;
+let userChoose = "monthly";
 
 const cardFirst = document.querySelector(".card_first");
 const cardSecond = document.querySelector(".card_second");
@@ -122,6 +122,8 @@ cardSecond.addEventListener("click", (e) => {
   }
 });
 
-continueBtn.addEventListener("click", (e) => {
-  console.log(userChoose);
+continueBtn.addEventListener("click", () => {
+  userChoose === "monthly"
+    ? (window.location.href = "https://apple.com/")
+    : (window.location.href = "https://google.com/");
 });
