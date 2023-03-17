@@ -6,24 +6,23 @@ let lang;
 let langFile;
 let userChoose = "monthly";
 
-const cardFirst = document.querySelector(".card_first");
-const cardSecond = document.querySelector(".card_second");
+const [cardFirst, cardSecond] = document.querySelectorAll(".card");
 const bannerBody = document.querySelector(".banner");
 const continueBtn = document.getElementById("continue");
 
 const setLang = () => {
   if (langParam === null) {
     lang = navigator.language.slice(0, 2);
+    console.log(lang);
   } else {
     lang = langParam;
+    console.log(lang);
   }
   langFile = `./assets/localization/${lang}.json`;
 };
 
 const initProject = () => {
   setLang();
-
-  // initTranslate();
 
   setTranslate(langFile);
 
