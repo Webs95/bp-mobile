@@ -13,10 +13,8 @@ const continueBtn = document.getElementById("continue");
 const setLang = () => {
   if (langParam === null) {
     lang = navigator.language.slice(0, 2);
-    console.log(lang);
   } else {
     lang = langParam;
-    console.log(lang);
   }
   langFile = `./assets/localization/${lang}.json`;
 };
