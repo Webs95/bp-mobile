@@ -131,7 +131,6 @@ body.banner {
     justify-content: space-between;
     align-items: center;
 
-
     .card {
       width: 137px;
       height: 162px;
@@ -148,6 +147,8 @@ body.banner {
       transition: transform .2s;
 
       &__title {
+        margin-bottom: 11.25px;
+
         font-size: 1.0625rem;
         line-height: 1.25rem;
       }
@@ -203,14 +204,19 @@ body.banner {
       }
 
       &__price {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 15px;
+
         &-container {
           margin-bottom: 13.37px;
         }
       }
 
       &__price-description {
-        font-weight: 200;
+        font-weight: 100;
         font-size: 13px;
+        line-height: 14px;
       }
 
       &__month-pay {
